@@ -1,24 +1,12 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/12/2026 11:02:59 PM
-// Design Name: 
-// Module Name: mult_seq_8x8_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+// -----------------------------------------------------------------------------
+// File    : mult_seq_8x8_tb.v
+// Brief   : Testbench for mult_seq_8x8: two vectors on a 10 ns clock, waveform inspection
+// Modules : mult_seq_8x8_tb
+// Author  : Bao Zhao
+// Created : 2026-04-12
+// -----------------------------------------------------------------------------
 
+`timescale 1ns / 1ps
 
 module mult_seq_8x8_tb();
 

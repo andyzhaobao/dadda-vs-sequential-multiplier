@@ -1,24 +1,12 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/12/2026 08:04:09 PM
-// Design Name: 
-// Module Name: mult_seq_8x8
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+// -----------------------------------------------------------------------------
+// File    : mult_seq_8x8.v
+// Brief   : 8x8 unsigned sequential shift-and-add multiplier sharing one 16-bit adder
+// Modules : mult_seq_8x8
+// Author  : Bao Zhao
+// Created : 2026-04-12
+// -----------------------------------------------------------------------------
 
+`timescale 1ns / 1ps
 
 module mult_seq_8x8(
     input [7:0] multiplier,

@@ -1,24 +1,12 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: Bao Zhao
-// 
-// Create Date: 02/17/2026 08:09:07 PM
-// Design Name: 
-// Module Name: Dadda8x8
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+// -----------------------------------------------------------------------------
+// File    : Dadda8x8.v
+// Brief   : 8x8 unsigned Dadda tree multiplier built only from gate primitives
+// Modules : Dadda8x8, FA, HA
+// Author  : Bao Zhao
+// Created : 2026-02-17
+// -----------------------------------------------------------------------------
 
+`timescale 1ns / 1ps
 
 module Dadda8x8(
     input [7:0] a,

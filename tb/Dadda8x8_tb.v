@@ -1,3 +1,11 @@
+// -----------------------------------------------------------------------------
+// File    : Dadda8x8_tb.v
+// Brief   : Directed testbench for Dadda8x8: six vectors, products printed with $display
+// Modules : Dadda8x8_tb
+// Author  : Bao Zhao
+// Created : 2026-02-17
+// -----------------------------------------------------------------------------
+
 module Dadda8x8_tb();
     
     reg [7:0] a, b;
