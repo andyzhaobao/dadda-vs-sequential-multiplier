@@ -137,11 +137,19 @@ not run against each other.
 | 10 | 15 | 150 | Even × odd |
 | 7 | 27 | 189 | Odd × odd |
 
-All six products matched in the waveform.
+All six products matched in the waveform:
+
+![Dadda8x8 simulation waveform: a, b, and prod for the six test vectors](docs/dadda8x8_waveform.png)
+
+Each vector is held for 10 ns, so the six cases occupy 0–60 ns. `prod` is shown
+both as an unsigned value (0, 65025, 0, 752, 150, 189) and expanded bit by bit.
+The 255 × 255 case sets every product bit except bits 1 through 8
+(`1111111000000001`), and the multiply-by-zero case leaves every bit low. With
+zero-delay gates the product changes in the same instant as the inputs.
 
 **Sequential** (`tb/mult_seq_8x8_tb.v`), two vectors with a 10 ns clock:
 170 × 255 = 43350 and 255 × 255 = 65025, each started with a one-cycle `start`
-pulse and observed 100 ns later.
+pulse and observed 100 ns later. No waveform capture was kept for this run.
 
 Six vectors out of 65536 possible input pairs is not a proof of correctness. An
 exhaustive testbench that sweeps all inputs and compares the two designs
@@ -152,10 +160,11 @@ against each other and against `*` would be the natural next step.
 ## Repository layout
 
 ```
-rtl/Dadda8x8.v         Gate-level Dadda tree, with the FA and HA modules
-rtl/mult_seq_8x8.v     Sequential shift-and-add multiplier
-tb/Dadda8x8_tb.v       Directed testbench for the Dadda tree
-tb/mult_seq_8x8_tb.v   Testbench for the sequential multiplier
+rtl/Dadda8x8.v               Gate-level Dadda tree, with the FA and HA modules
+rtl/mult_seq_8x8.v           Sequential shift-and-add multiplier
+tb/Dadda8x8_tb.v             Directed testbench for the Dadda tree
+tb/mult_seq_8x8_tb.v         Testbench for the sequential multiplier
+docs/dadda8x8_waveform.png   Vivado waveform for the Dadda testbench
 ```
 
 Both designs were run through the Vivado GUI; there are no scripts.
